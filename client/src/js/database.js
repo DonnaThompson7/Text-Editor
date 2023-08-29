@@ -15,7 +15,7 @@ openDB('jate', 1, {
     },
   });
 
-// TODO: Done, but not tested: Add logic to a method that accepts some content and adds it to the database
+// add content to the database
 export const putDb = async (content) => {
   console.log('Put to the database');
 
@@ -36,7 +36,7 @@ export const putDb = async (content) => {
   console.log('🚀 - data saved to the database', result);
 };
 
-// TODO: Done, but not tested: Add logic for a method that gets all the content from the database
+// get all the content from the database
 export const getDb = async () => {
     console.log('GET from the database');
     // Create a connection to the database database and version we want to use.
@@ -54,7 +54,7 @@ export const getDb = async () => {
     // Get confirmation of the request.
     const result = await request;
     console.log('result.value', result);
-      return result?.value
+    return result?.value
 };
 
 initdb();
